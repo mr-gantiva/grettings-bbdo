@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "partita";
+  src: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/fonts/Partita-Regular.otf)
+    format("opentype");
+}
+.main-container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bienvenida-container {
+  background: #edf1f7;
+}
+.bienvenida-container header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.bienvenida-container header .box-img {
+  position: relative;
+  z-index: 10;
+}
+.bienvenida-container header .contenedor-imagen {
+  position: absolute;
+  top: 0;
+}
+.bienvenida-container header .contenedor-imagen img {
+  width: 650px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.info-container {
+  display: flex;
+  position: relative;
+}
+.info-container .logo-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 70px;
+  margin-top: 15px;
+}
+.info-container .logo-vertical img {
+  width: 20px;
+}
+.info-container .info-persona {
+  width: 80%;
+  margin-left: 70px;
+}
+.info-container .nombre p {
+  font-size: 40px;
+  font-family: "Barlow", sans-serif;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.info-container .cargo {
+  font-family: "partita", sans-serif;
+  text-transform: uppercase;
+  color: #db0000;
+  font-weight: lighter;
+}
+.info-container .equipo {
+  font-family: "partita", sans-serif;
+  text-transform: uppercase;
+  color: #db0000;
+  font-weight: lighter;
+}
+.info-persona .nombre {
+  position: relative;
+  z-index: 12;
+}
+.info-persona p {
+  margin-bottom: 0;
+}
+.info-container .descripcion img {
+  width: 30px;
+}
+.info-container .formas-left {
+  position: absolute;
+  right: 0;
+  top: -25px;
+}
+.info-container .formas-left .globo-rojo {
+  position: relative;
+  z-index: 11;
+}
+.info-container .formas-left img {
+  width: 120px;
+}
+
+.info-desafio {
+  position: relative;
+  display: flex;
+  font-family: "Barlow", sans-serif;
+}
+.info-desafio .fecha-ingreso {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  font-family: "partita", sans-serif;
+}
+.info-desafio .contenedor-desafio-intereses {
+  position: relative;
+  width: 80%;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.info-desafio span {
+  font-weight: 600;
+  font-size: 14px;
+}
+.info-desafio p {
+  font-size: 14px;
+  text-align: justify;
+  margin-top: 10px;
+}
+.info-desafio .desafio,
+.info-desafio .intereses,
+.info-desafio .fecha-ingreso {
+  margin: 20px 0;
+}
+.info-desafio .intereses {
+  margin-bottom: 65px;
+}
+.info-desafio .onda-fuscia {
+  position: absolute;
+  bottom: 0;
+}
+.info-desafio .onda-fuscia img {
+  width: 160px;
+} /*# sourceMappingURL=bienvenida.css.map */

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: "partita";
+    src: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/fonts/Partita-Regular.otf) format("opentype");
+  }
+.main-container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bienvenida-container {
+  // max-width: 650px;
+  // min-width: 650px;
+    background: #edf1f7;
+  header {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .box-img {
+      position: relative;
+      z-index: 10;
+    }
+    .contenedor-imagen {
+      position: absolute;
+      top: 0;
+      img {
+        width: 650px;
+        height: 240px;
+        object-fit: cover;
+        // filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+// .mask1 {
+//   -webkit-mask-image: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/img/logo-bbdo-bienvenidax650.png);
+//   mask-image: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/img/logo-bbdo-bienvenidax650.png);
+//   -webkit-mask-repeat: no-repeat;
+//   mask-repeat: no-repeat;
+// }
+
+.info-container {
+  display: flex;
+  position: relative;
+
+  .logo-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 70px;
+    margin-top: 15px;
+    img {
+        width: 20px;
+    }
+  }
+  .info-persona {
+    width: 80%;
+    margin-left: 70px;
+  }
+  .nombre {
+    p {
+      font-size: 50px;
+      font-family: "Barlow", sans-serif;
+      font-weight: lighter;
+      text-transform: capitalize;
+    }
+  }
+  .cargo {
+    font-family: 'partita',sans-serif;
+    text-transform: uppercase;
+    color: #db0000;
+    font-weight: lighter;
+  }
+  .descripcion {
+    // margin-left: -20px;
+    // margin-top: 20px;
+    // writing-mode: vertical-lr;
+    // transform: rotate(180deg);
+    // text-transform: uppercase;
+    // // font-size: 80px;
+    // font-size: 55px;
+    // font-family: "Barlow", sans-serif;
+    img {
+      width: 40px;
+    }
+  }
+  .formas-left {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    img {
+      width: 120px;
+    }
+  }
+}
+.info-desafio {
+    position: relative;
+    display: flex;
+    font-family: "Barlow", sans-serif;
+    .fecha-ingreso {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        font-family: 'partita',sans-serif;
+    }
+    .contenedor-desafio-intereses {
+        position: relative;
+        width: 80%;
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    span {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+        text-align: justify;
+        margin-top: 10px;
+    }
+    .desafio,.intereses,.fecha-ingreso {
+        margin: 20px 0;
+    }
+    .intereses {
+        margin-bottom: 65px;
+    }
+    .onda-fuscia {
+        position: absolute;
+        bottom: 0;
+        img {
+            width: 180px;
+        }
+    }
+}

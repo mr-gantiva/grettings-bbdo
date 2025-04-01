@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "partita";
+  src: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/fonts/Partita-Regular.otf)
+    format("opentype");
+}
+/*INDEX.HTML*/
+.main-container-index {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container-index .btn-accesos {
+  display: flex;
+  gap: 50px;
+}
+.main-container-index .btn-accesos a {
+  text-decoration: none;
+  background: #ffffff;
+  padding: 20px;
+  font-family: "Barlow", sans-serif;
+  color: #db0000;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid rgba(102, 102, 102, 0.2);
+  transform: scale(1.1);
+}
+.main-container-index .btn-accesos a:hover {
+  background: #db0000;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+body {
+  width: 100%;
+  background-color: #202b38;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.formulario-container .formulario-imagen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formulario-container .formulario-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card-container {
+  background: #edf1f7;
+  min-width: 650px;
+  max-width: 650px;
+}
+
+.title-container {
+  position: relative;
+  line-height: 0.8;
+}
+.title-container .name-container,
+.title-container .lastname-container {
+  display: flex;
+  font-size: 90px;
+  font-family: "Barlow", sans-serif;
+  z-index: 10;
+}
+.title-container .name-container {
+  width: 100%;
+  position: relative;
+  /* margin-top: 12px; */
+  /* margin-left: 4px; */
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.title-container .name-container span {
+  width: 100%;
+}
+.title-container .lastname-container {
+  position: relative;
+  justify-content: end;
+  /* margin-right: 4px; */
+  /* padding-right: 20px; */
+  padding-top: 10px;
+}
+.title-container .lastname-container span {
+  width: 100%;
+  text-align: center;
+}
+.title-container .lastname-container p {
+  color: #db0000;
+  font-family: "partita", sans-serif;
+  font-size: 14px;
+}
+.title-container .date-container {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  font-family: "partita", sans-serif;
+}
+.title-container .position-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-left: 10px;
+  position: relative;
+  z-index: 10;
+}
+.title-container .position-container p {
+  color: #db0000;
+  font-family: "partita", sans-serif;
+  font-weight: lighter;
+}
+.title-container .globos {
+  position: absolute;
+  top: 70px;
+  z-index: 0;
+}
+.title-container .globos img {
+  width: 230px;
+}
+
+.picture-section {
+  position: relative;
+  margin: 110px 0 20px 0;
+}
+.picture-section .picture-container {
+  position: relative;
+}
+.picture-section .picture-container img {
+  width: 100%;
+  height: 553px;
+  object-fit: cover;
+}
+.picture-section .picture-container .mask1 {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.picture-section .cintas {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+}
+.picture-section .cintas img {
+  width: 160px;
+}
+
+.mensaje-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 30px;
+  position: relative;
+  margin-bottom: 47px;
+}
+.mensaje-section .logo-vertical img {
+  width: 34px;
+}
+.mensaje-section .descripcion span {
+  font-family: "Barlow", sans-serif;
+  font-size: 65px;
+  font-weight: lighter;
+  line-height: 0.9;
+}
+.mensaje-section .globo-footer {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.mensaje-section .globo-footer img {
+  width: 180px;
+} /*# sourceMappingURL=style.css.map */
