@@ -19,6 +19,7 @@
 
 .bienvenida-container {
   background: #edf1f7;
+  overflow: hidden;
 }
 
 .bienvenida-container header {
@@ -160,8 +161,14 @@
   bottom: 0;
 }
 
-.info-desafio .onda-fuscia img {
-  width: 160px;
+.onda-fuscia img {
+  position: relative;
+  bottom: -185px;
+  width: 85%;
+}
+
+.logo-footer {
+  width: 40%;
 }
 
 /*# sourceMappingURL=bienvenida.css.map */
