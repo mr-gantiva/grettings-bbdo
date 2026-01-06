@@ -71,6 +71,7 @@
   font-family: "Golos Text", sans-serif;
   font-weight: lighter;
   text-transform: capitalize;
+  color: #242527;
 }
 
 .info-container .cargo {
@@ -161,11 +162,11 @@
   bottom: 0;
 }
 
-.onda-fuscia img {
+/* .onda-fuscia img {
   position: relative;
   bottom: -185px;
   width: 85%;
-}
+} */
 
 .logo-footer {
   width: 40%;
