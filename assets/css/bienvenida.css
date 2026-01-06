@@ -6,8 +6,7 @@
 
 @font-face {
   font-family: "partita";
-  src: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/fonts/Partita-Regular.otf)
-    format("opentype");
+  src: url(https://www.desarrolloflare.cl/sitios/cumple_bbdo/assets/fonts/Partita-Regular.otf) format("opentype");
 }
 .main-container {
   width: 100%;
@@ -59,7 +58,7 @@
   margin-left: 70px;
 }
 .info-container .nombre p {
-  font-size: 40px;
+  font-size: 50px;
   font-family: "Barlow", sans-serif;
   font-weight: lighter;
   text-transform: capitalize;
@@ -70,30 +69,20 @@
   color: #db0000;
   font-weight: lighter;
 }
+.info-container .descripcion img {
+  width: 40px;
+}
 .info-container .equipo {
   font-family: "partita", sans-serif;
   text-transform: uppercase;
   color: #db0000;
   font-weight: lighter;
-}
-.info-persona .nombre {
-  position: relative;
-  z-index: 12;
-}
-.info-persona p {
-  margin-bottom: 0;
-}
-.info-container .descripcion img {
-  width: 30px;
+  margin: 0;
 }
 .info-container .formas-left {
   position: absolute;
   right: 0;
   top: -25px;
-}
-.info-container .formas-left .globo-rojo {
-  position: relative;
-  z-index: 11;
 }
 .info-container .formas-left img {
   width: 120px;
@@ -107,8 +96,22 @@
 .info-desafio .fecha-ingreso {
   width: 20%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-family: "partita", sans-serif;
+}
+.info-desafio .fecha-ingreso .fecha-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-desafio .fecha-ingreso .img-bienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-desafio .fecha-ingreso .img-bienvenida img {
+  width: 20px;
 }
 .info-desafio .contenedor-desafio-intereses {
   position: relative;
@@ -125,9 +128,7 @@
   text-align: justify;
   margin-top: 10px;
 }
-.info-desafio .desafio,
-.info-desafio .intereses,
-.info-desafio .fecha-ingreso {
+.info-desafio .desafio, .info-desafio .intereses, .info-desafio .fecha-ingreso {
   margin: 20px 0;
 }
 .info-desafio .intereses {
@@ -138,5 +139,17 @@
   bottom: 0;
 }
 .info-desafio .onda-fuscia img {
-  width: 160px;
-} /*# sourceMappingURL=bienvenida.css.map */
+  width: 180px;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  left: 60px;
+}
+.logo-footer img {
+  width: 60%;
+}
+
+/*# sourceMappingURL=bienvenida.css.map */

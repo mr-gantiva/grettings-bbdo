@@ -93,6 +93,13 @@
       width: 40px;
     }
   }
+  .equipo {
+    font-family: "partita", sans-serif;
+    text-transform: uppercase;
+    color: #db0000;
+    font-weight: lighter;
+    margin: 0;
+  }
   .formas-left {
     position: absolute;
     right: 0;
@@ -109,8 +116,23 @@
     .fecha-ingreso {
         width: 20%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
         font-family: 'partita',sans-serif;
+        .fecha-display {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .img-bienvenida {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 20px;
+          }
+        }
     }
     .contenedor-desafio-intereses {
         position: relative;
@@ -140,4 +162,14 @@
             width: 180px;
         }
     }
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  left: 60px;
+  img {
+    width: 60%;
+  }
 }
