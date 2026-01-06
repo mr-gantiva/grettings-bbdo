@@ -79,6 +79,7 @@
   text-transform: uppercase;
   color: #db0000;
   font-weight: lighter;
+  font-size: 14px;
 }
 
 .info-container .equipo {
@@ -95,7 +96,6 @@
 
 .info-persona p {
   margin-bottom: 0;
-  font-size: 14px;
 }
 
 .descripcion img {
