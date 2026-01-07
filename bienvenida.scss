@@ -64,14 +64,15 @@
   }
   .info-persona {
     width: 80%;
-    margin-left: 70px;
+    margin-left: 15px;
   }
   .nombre {
     p {
-      font-size: 50px;
+      font-size: clamp(1.875rem, 2vw + 1.75rem, 2.5rem);
       font-family: "Golos Text", sans-serif;
       font-weight: lighter;
       text-transform: capitalize;
+      margin: 0;
     }
   }
   .cargo {
@@ -99,13 +100,16 @@
     color: #db0000;
     font-weight: lighter;
     margin: 0;
+    p {
+      margin: 0;
+    }
   }
   .formas-left {
     position: absolute;
     right: 0;
     top: -25px;
     img {
-      width: 120px;
+      width: 100px;
     }
   }
 }
@@ -137,8 +141,8 @@
     .contenedor-desafio-intereses {
         position: relative;
         width: 80%;
-        padding-right: 60px;
-        padding-left: 60px;
+        padding-right: 80px;
+        padding-left: 15px;
     }
     span {
         font-weight: 600;
