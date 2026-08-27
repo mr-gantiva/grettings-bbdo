@@ -1,0 +1,23 @@
+/* Paleta de marca BBDO.
+   Rojo principal #EF4023, negro #231F20, blanco #FFFFFF.
+   Todo lo demás del proyecto referencia estas variables, así que cambiar
+   un valor acá lo cambia en las tarjetas y en la interfaz a la vez. */
+
+:root {
+  --bbdo-rojo: #ef4023;
+  --bbdo-rojo-hover: #d43419;
+  --bbdo-rojo-tenue: rgba(239, 64, 35, 0.14);
+  --bbdo-negro: #231f20;
+  --bbdo-negro-suave: #2f2b2c;
+  --bbdo-blanco: #ffffff;
+
+  --ui-texto: #231f20;
+  --ui-texto-tenue: #6b6567;
+  --ui-borde: #ddd8d9;
+  --ui-superficie: #ffffff;
+  --ui-superficie-2: #f6f4f4;
+
+  /* Fondo por defecto de las tarjetas, el mismo que tenían antes.
+     El selector de color lo sobrescribe con --fondo-tarjeta. */
+  --fondo-tarjeta-def: #edf1f7;
+}

@@ -1,0 +1,71 @@
+/* Marcas visuales de los elementos que se pueden mover dentro de la tarjeta.
+   Todo lo de acá se apaga durante la exportación a PNG, para que el archivo
+   descargado no traiga contornos ni etiquetas. */
+
+.ed-elemento {
+  position: relative;
+  cursor: grab;
+  outline: 1px dashed transparent;
+  outline-offset: -1px;
+  transition:
+    outline-color 0.12s ease,
+    background-color 0.12s ease;
+  touch-action: none;
+}
+
+.ed-elemento:hover {
+  outline-color: rgba(239, 64, 35, 0.45);
+}
+
+.ed-elemento:focus {
+  outline-color: rgba(239, 64, 35, 0.45);
+}
+
+.ed-elemento.ed-seleccionado {
+  outline: 1px solid var(--bbdo-rojo);
+  outline-offset: -1px;
+  background-color: var(--bbdo-rojo-tenue);
+}
+
+.ed-elemento.ed-arrastrando {
+  cursor: grabbing;
+}
+
+/* Etiqueta con el nombre del elemento seleccionado */
+.ed-elemento.ed-seleccionado::after {
+  content: attr(data-etiqueta);
+  position: absolute;
+  top: -5px;
+  left: 0;
+  transform: translateY(-100%);
+  background: var(--bbdo-rojo);
+  color: var(--bbdo-blanco);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 200;
+}
+
+/* Estado de captura: la tarjeta se exporta limpia.
+   La transicion se anula primero. Si no, getComputedStyle devuelve el valor
+   a medio desvanecer y dom-to-image se lleva el contorno al PNG. */
+.ed-exportando .ed-elemento,
+.ed-exportando .ed-elemento:hover,
+.ed-exportando .ed-elemento:focus {
+  transition: none !important;
+  outline: none !important;
+  outline-color: transparent !important;
+  background-color: transparent !important;
+  cursor: default;
+}
+
+.ed-exportando .ed-elemento::after {
+  content: none !important;
+}

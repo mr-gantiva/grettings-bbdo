@@ -1,0 +1,22 @@
+{
+  "name": "grettings-bbdo-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.41",
+    "vue-router": "^4.5.0",
+    "bootstrap": "5.3.3",
+    "dom-to-image": "2.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "^8.2.2",
+    "sass": "^1.80.0"
+  }
+}
