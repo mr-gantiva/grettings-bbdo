@@ -20,7 +20,9 @@ const interesInput = ref('')
 const fechaInput = ref('')
 
 // Imagen subida por el usuario
-const imagenSrc = ref('/assets/img/img-muestra.jpg')
+// Esta ruta es dinamica, asi que Vite no puede reescribirla al compilar.
+// BASE_URL le antepone la base del sitio (/ en local, /grettings-bbdo/ en Pages).
+const imagenSrc = ref(import.meta.env.BASE_URL + "assets/img/img-muestra.jpg")
 
 /*
   El original arranca con el texto de muestra escrito en el HTML y solo

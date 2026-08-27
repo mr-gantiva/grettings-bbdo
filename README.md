@@ -16,13 +16,37 @@ Necesita Node 20 o superior. Si el proyecto se copia entre Windows, macOS y Linu
 hay que borrar `node_modules` y volver a correr `npm install`: algunas dependencias
 traen binarios propios de cada sistema.
 
+## Publicación
+
+El sitio vive en https://mr-gantiva.github.io/grettings-bbdo/
+
+Cada push a `master` dispara `.github/workflows/deploy.yml`, que compila y publica
+`dist/`. En el repositorio, **Settings > Pages > Source** tiene que estar en
+"GitHub Actions", no en una rama.
+
+GitHub Pages sirve archivos estáticos, así que no puede ejecutar el código de
+`src/`. Publicar el repositorio tal cual da una página en blanco: hay que publicar
+lo que sale de `npm run build`. De eso se encarga el workflow.
+
+Tres cosas dependen de que el sitio cuelgue de `/grettings-bbdo/` y no de la raíz
+del dominio:
+
+- `base: '/grettings-bbdo/'` en `vite.config.js`. Si el repositorio cambia de
+  nombre, hay que cambiar este valor.
+- El router usa `createWebHashHistory`. Pages no reescribe rutas, así que con
+  history un F5 sobre `/bienvenida` daría 404. Con hash las URLs quedan como
+  `/grettings-bbdo/#/bienvenida`.
+- La foto de muestra de Bienvenida se arma con `import.meta.env.BASE_URL`. Vite
+  reescribe las rutas que ve en el HTML al compilar, pero esa es dinámica y hay
+  que anteponerle la base a mano.
+
 ## Rutas
 
-| Ruta          | Equivale a                      |
-| ------------- | ------------------------------- |
-| `/`           | `index.html`                    |
-| `/bienvenida` | `assets/views/bienvenida.html`  |
-| `/cumple`     | `assets/views/cumple-bbdo.html` |
+| Ruta           | Equivale a                      |
+| -------------- | ------------------------------- |
+| `#/`           | `index.html`                    |
+| `#/bienvenida` | `assets/views/bienvenida.html`  |
+| `#/cumple`     | `assets/views/cumple-bbdo.html` |
 
 ## Estructura
 
@@ -133,3 +157,8 @@ El editor se probó con 27 comprobaciones automatizadas: arrastre con mouse, sli
 de tamaño, interlineado y posición, movimiento con teclado, cambio de fondo,
 restablecer, cerrar la selección con clic fuera y con Escape, y que el PNG salga
 exactamente igual con un elemento seleccionado que sin nada seleccionado.
+
+También se simuló GitHub Pages sirviendo `dist/` bajo `/grettings-bbdo/` y sin
+reescritura de rutas: cargan la portada y las dos plantillas, sobreviven a un F5,
+las 12 imágenes y la fuente Partita resuelven, la descarga funciona, y no hay
+ninguna respuesta 404.
