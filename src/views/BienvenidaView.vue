@@ -18,6 +18,7 @@ const equipoInput = ref('')
 const desafioInput = ref('')
 const interesInput = ref('')
 const fechaInput = ref('')
+const tamañoOnda = ref(180)
 
 // Imagen subida por el usuario
 // Esta ruta es dinamica, asi que Vite no puede reescribirla al compilar.
@@ -169,6 +170,20 @@ async function descargar() {
           ></textarea>
         </div>
 
+        <div class="campo">
+          <label for="ondaInput" class="form-label d-flex justify-content-between">
+            Tamaño onda fucsia <span>{{ tamañoOnda }}px</span>
+          </label>
+          <input
+            type="range"
+            class="form-range"
+            id="ondaInput"
+            min="50"
+            max="300"
+            v-model="tamañoOnda"
+          />
+        </div>
+
         <button type="button" class="btn btn-primary w-100" id="dl-png" @click="descargar">
           Descargar imagen
         </button>
@@ -267,7 +282,7 @@ async function descargar() {
           </div>
 
           <div class="onda-fuscia">
-            <img src="/assets/img/ondas-fucsia-bienvenida-left.png" alt="" />
+            <img src="/assets/img/ondas-fucsia-bienvenida-left.png" :style="{ width: tamañoOnda + 'px' }" alt="" />
           </div>
         </section>
       </div>
