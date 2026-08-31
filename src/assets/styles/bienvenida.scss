@@ -76,11 +76,15 @@
 }
 .info-container .cargo {
   font-size: var(--ed-fs, 1rem);
-  font-family: "Partita", sans-serif;
   text-transform: uppercase;
   color: var(--bbdo-rojo);
   font-weight: lighter;
 }
+
+.info-container .cargo p{
+  font-family: "Partita", sans-serif;
+}
+
 .info-container .descripcion img {
   width: 40px;
 }
