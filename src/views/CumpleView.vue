@@ -125,14 +125,16 @@ function cargarRegistroActual() {
 
   // Procesar la fecha de Excel
   let fecha = row["Fecha nacimiento"];
+  const currentYear = new Date().getFullYear();
+  
   if (typeof fecha === "number") {
     let dateObj = new Date(Math.round((fecha - 25569) * 86400 * 1000));
     dateObj = new Date(dateObj.getTime() + dateObj.getTimezoneOffset() * 60000);
     if (!isNaN(dateObj)) {
-      fechaInput.value = dateObj.toISOString().split("T")[0];
+      fechaInput.value = `${currentYear}-${String(dateObj.getMonth() + 1).padStart(2, "0")}-${String(dateObj.getDate()).padStart(2, "0")}`;
     }
   } else if (row["Día"] && row["Mes"]) {
-    fechaInput.value = `2024-${String(row["Mes"]).padStart(2, "0")}-${String(row["Día"]).padStart(2, "0")}`;
+    fechaInput.value = `${currentYear}-${String(row["Mes"]).padStart(2, "0")}-${String(row["Día"]).padStart(2, "0")}`;
   } else {
     fechaInput.value = "";
   }
